@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #d7d5d5;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+.header img {
+  height: 40px;
+}
+.header .row {
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.logo h3 {
+  margin: 0 10px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.navbar a {
+  color: white;
+  padding: 7px 10px;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #137f69;
+}
+
+/* BODY */
+.devices {
+  background-color: black;
+}
+.devices p {
+  padding: 20px;
+  color: white;
+  border-left: 2px solid white;
+}
+.devices .row {
+  justify-content: center;
+}
+
+.head {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.head h4 {
+  color: #1abc9c;
+}
+
+.post {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  padding: 10px;
+  width: 100%;
+}
+.post img {
+  height: 128px;
+}
+.post .description * {
+  margin: 4px;
+}
+.post .description h3 {
+  color: #1abc9c;
+}
+.post .description p:last-child {
+  color: gray;
+  font-size: 12px;
+}
+
+.info {
+  padding: 10px;
+  height: 100%;
+  border-left: 2px solid gray;
+}
+.info p {
+  font-size: 20px;
+}
+.info .signature * {
+  color: #1abc9c;
+  margin: 4px;
+}
+.info .contact-btn {
+  background-color: orangered;
+  border-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 5px;
+}
+.info .contact-btn:hover {
+  background-color: #d43b02;
+}
+.info .contact-btn:active {
+  background-color: #af3102;
+}
+.info .contact-btn img {
+  height: 32px;
+  filter: invert(1);
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .header .row {
+    flex-direction: column-reverse;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .post {
+    width: 100%;
+  }
+  .devices p {
+    border-left: 0;
+    color: gray;
+    margin: 0;
+    padding-top: 0;
+  }
+  .devices .row {
+    text-align: center;
+  }
+  .info {
+    border-top: 2px solid gray;
+    border-left: 0;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .header .navbar a {
+    font-size: 14px;
+  }
+  .devices .row img:first-child {
+    display: none;
+  }
+  .devices p {
+    padding: 10px;
+  }
+}

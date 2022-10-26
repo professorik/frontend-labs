@@ -1,0 +1,45 @@
+h1 {
+  font-family: Arial, serif;
+  font-size: 22px;
+  color: blue;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  margin: 20px;
+}
+
+.paragraph:nth-of-type(2) {
+  background-color: lightpink;
+  color: red;
+  border-width: 5px;
+  border-style: dashed;
+}
+
+.paragraph > p {
+  font-size: 16px;
+}
+
+.header * {
+  font-size: 12px;
+  font-style: italic;
+  color: green;
+}
+
+.firstWord {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+table {
+  background-color: #12f170;
+}
+
+table img {
+  width: 100px;
+  height: 100px;
+}
+
+div.cell {
+  text-align: center;
+}
