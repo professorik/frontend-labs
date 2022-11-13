@@ -1,0 +1,167 @@
+body {
+    background: #fff;
+    color: #333;
+    font-family: Lato, sans-serif;
+}
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 100px auto 0;
+}
+.container > div {
+    margin: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li * {
+    float: left;
+}
+li, h3 {
+    clear:both;
+    list-style:none;
+}
+
+input, button, textarea {
+    outline: none;
+}
+button {
+    display: block;
+    background: none;
+    border: 0;
+    color: #888;
+    font-size: 15px;
+    width: 60px;
+    margin: 10px 0 0;
+    font-family: Lato, sans-serif;
+    cursor: pointer;
+}
+button:hover {
+    color: #333;
+}
+button.add {
+    width: 100px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 0;
+    font-size: 16px;
+}
+button.add:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+}
+
+h3,
+label[for='name'],
+label[for='description'] {
+    color: #333;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #333;
+    padding: 30px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+input[type="text"],
+textarea[id="description"] {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+    width: 100%;
+}
+textarea[id="description"] {
+    height: 180px;
+    resize: vertical;
+}
+input[type="text"]:focus,
+textarea[id="description"]:focus {
+    color: #333;
+}
+label[for='name'],
+label[for='description']{
+    display: block;
+    border-bottom: 2px dashed #333;
+}
+
+/* list */
+li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+}
+li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+}
+li > .delete:hover {
+    color: #CF2323;
+}
+
+.entity > input {
+    appearance: none;
+    border: none;
+    background: none;
+    transition: 0.2s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.entity > input::after {
+    content: "˄";
+    position: relative;
+    height: 1em;
+    cursor: pointer;
+}
+
+.entity > input:checked {
+    transform: rotate(180deg);
+}
+
+.entity > textarea {
+    display: none;
+}
+
+.entity > input:checked ~ textarea {
+    clear: left;
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    border: none;
+    resize: vertical;
+}
+
+
+input.invalid {
+    border: red solid 1px;
+}
+textarea.invalid {
+    border: red solid 1px;
+}
+span.error {
+    visibility: hidden;
+    color: red;
+}
